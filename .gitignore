@@ -1,0 +1,8 @@
+node_modules/
+.expo/
+.env
+*.log
+dist/
+build/
+.vscode/
+package-lock.json
