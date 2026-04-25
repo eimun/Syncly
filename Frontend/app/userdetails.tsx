@@ -75,9 +75,11 @@ const UserDetails = () => {
         transition={{ type: 'timing', duration: 400, delay: 100 }}
         style={styles.glassCard}
       >
-        <View style={styles.avatarInner}>
-          <Text style={styles.placeholderText}>Avatar Preview</Text>
-        </View>
+        <Image 
+          style={styles.avatarImage} 
+          source={require('../assets/images/player_avatar.png')} 
+          contentFit="cover"
+        />
       </MotiView>
 
       {/* Detail rows */}
@@ -136,9 +138,9 @@ const getStyles = (theme: 'dark' | 'light') => {
     glowSource: { position: 'absolute', bottom: 120, left: -80, width: 250, height: 250, borderRadius: 125, backgroundColor: isLight ? 'rgba(128,0,255,0.15)' : 'rgba(255,101,0,0.15)' },
     headerContainer: { width: '100%', paddingHorizontal: 25, marginBottom: 30 },
     heading: { fontSize: 32, color: accent, fontWeight: '900', letterSpacing: -1, textShadowColor: isLight ? 'rgba(128,0,255,0.6)' : 'rgba(255,101,0,0.6)', textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 15 },
-    glassCard: { width: width * 0.8, height: width * 0.8, backgroundColor: isLight ? 'rgba(0,0,0,0.02)' : 'rgba(255,255,255,0.02)', borderRadius: 24, padding: 1, marginBottom: 40, borderWidth: 1.5, borderColor: isLight ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.15)' },
+    glassCard: { width: width * 0.8, height: width * 0.8, backgroundColor: isLight ? 'rgba(0,0,0,0.02)' : 'rgba(255,255,255,0.02)', borderRadius: 24, padding: 1, marginBottom: 40, borderWidth: 1.5, borderColor: isLight ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.15)', overflow: 'hidden' },
+    avatarImage: { width: '100%', height: '100%' },
     avatarInner: { flex: 1, backgroundColor: isLight ? 'rgba(0,0,0,0.01)' : 'rgba(255,255,255,0.01)', borderRadius: 23, justifyContent: 'center', alignItems: 'center' },
-    placeholderText: { color: isLight ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.15)', fontWeight: '700', fontSize: 10, letterSpacing: 4 },
     detailsContainer: { width: '100%', paddingHorizontal: 25, gap: 12 },
     glassDetailRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: isLight ? 'rgba(0,0,0,0.03)' : 'rgba(255,255,255,0.04)', paddingVertical: 18, paddingHorizontal: 20, borderRadius: 16, borderWidth: 1, borderColor: isLight ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.08)' },
     label: { color: isLight ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.35)', fontSize: 11, fontWeight: '800', textTransform: 'uppercase', letterSpacing: 1 },
