@@ -35,6 +35,4 @@ https://ambitiousaura.github.io/Ojt-Project/
 
 ---
 
-## 📸 Screenshots
 
-(Add images here later)
